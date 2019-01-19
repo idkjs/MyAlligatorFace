@@ -62,7 +62,7 @@ export default class Authentication extends React.Component {
 />
 
 { this.state.selectedIndex === 0 ? (
-        <View>
+        <View style={styles.form}>
           <Input
             label="Email"
             leftIcon={{ type: 'font-awesome', name: 'envelope' }}
@@ -97,7 +97,7 @@ export default class Authentication extends React.Component {
             onPress={ this.handleSignUp }
           />
         </View>
-):(<View>
+):(<View style={styles.form}>
   <Input
   label="Email"
   leftIcon={{ type: 'font-awesome', name: 'envelope' }}
@@ -143,7 +143,6 @@ export default class Authentication extends React.Component {
         </Modal>
         </View>
         )}
-
       </View>
     );
   }
@@ -156,5 +155,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
-  }
+  },
+  form: {
+    width: '90%',
+   }
 });
