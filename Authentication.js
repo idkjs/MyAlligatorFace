@@ -79,6 +79,29 @@ export default class Authentication extends React.Component {
           title='Submit'
           onPress={ this.handleSignUp }
         />
+        <Input
+  label="Email"
+  leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+  onChangeText={
+    // Set this.state.email to the value in this Input box
+    (value) => this.setState({ email: value })
+  }
+  placeholder="my@email.com"
+/>
+<Input
+  label="Password"
+  leftIcon={{ type: 'font-awesome', name: 'lock' }}
+  onChangeText={
+    // Set this.state.email to the value in this Input box
+    (value) => this.setState({ password: value })
+  }
+  placeholder="p@ssw0rd123"
+  secureTextEntry
+/>
+<Button
+  title='Submit'
+  onPress={ this.handleSignIn }
+/>
         <Modal
           visible={this.state.modalVisible}
         >
